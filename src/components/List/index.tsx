@@ -1,8 +1,9 @@
+import { useState } from "react";
 import Item from "./item";
 import styles  from "./list.module.scss"
 
 function List() {
-  const tarefas = [{
+  const [tarefas, setTarefas] = useState([{
     tarefa: "React",
     tempo: "02:00:00"
   }, {
@@ -11,11 +12,15 @@ function List() {
   }, {
     tarefa: "TypeScript",
     tempo: "23:00:00"
-  }];
+  }]
+  );
 
   return (
     <aside className={styles.listaTarefas}>
-      <h2>estudos do dia</h2>
+      <h2 onClick={() => {
+        console.log("h2 clicado ", tarefas)
+        setTarefas([...tarefas, {tarefa: "estudar estado", tempo: "05:00:00"}])
+      }}>estudos do dia</h2>
       <ul>
          {tarefas.map((item, index) => (
           <Item
