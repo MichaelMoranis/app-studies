@@ -3,6 +3,12 @@ import styles from  "./form.module.scss"
 import Button from "../Button";
 
 class Formulario extends React.Component {
+
+  state = {
+    tarefa: "",
+    tempo: "00:00"
+  }
+
   render() {
     return (
       <form className={styles.novaTarefa}>
@@ -22,7 +28,9 @@ class Formulario extends React.Component {
              type="time"
              step="1"
              name="tempo"
+             value={this.state.tempo}
              id="tempo"
+             onChange={evento => this.setState({...this.state, tempo: evento.target.value})}
              min="00:00:00"
              max="01:30:00"
              required
