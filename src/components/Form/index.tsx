@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "../Button";
 import styles from  "./form.module.scss"
+import Button from "../Button";
 
 class Formulario extends React.Component {
   render() {
@@ -28,7 +28,9 @@ class Formulario extends React.Component {
              required
            />
         </div>
-        <Button />
+        <Button>
+          mudar
+        </Button>
       </form>
     )
   }
