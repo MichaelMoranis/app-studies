@@ -2,6 +2,7 @@ import styles from "./botao.module.scss"
 
 interface ButtonProps {
   children: string;
+  type?: "button" | "submit" | "reset" | undefined
 }
 
 function Button({ children }: ButtonProps) {
