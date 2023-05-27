@@ -2,7 +2,6 @@ import { ITarefa } from "../../types/tarefa";
 import Item from "./item";
 import styles  from "./list.module.scss"
 
-
 function List({ tarefas }: {tarefas: ITarefa[] }) {
 
   return (
